@@ -48,7 +48,7 @@ LIMIT 10;
 
 This chart highlights the highest-paying remote data positions currently on the market. 
 
-![Top Paying Roles](Project_sql\assets.sql\1_top_paying_remote_jobs.png)
+![Top Paying Roles](Project_sql/assets.sql/1_top_paying_remote_jobs.png)
 
 *Bar chart showing top 10 highest-paying remote data roles, with a smooth color gradient mapped to salary.*
 
