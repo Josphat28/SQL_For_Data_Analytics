@@ -63,6 +63,7 @@ FROM job_postings_fact
 LEFT JOIN skills_job_dim on skills_job_dim.job_id = job_postings_fact.job_id
 WHERE (EXTRACT(MONTH from job_posted_date) between 1 and 3) and (salary_year_avg > 70000) */
 
+
 -- practice problem 8 
 
 SELECT
@@ -71,13 +72,16 @@ SELECT
     salary_year_avg,
     job_via
 FROM(    
-SELECT*
-FROM january_jobs
-UNION ALL
-select*
-FROM february_jobs
-UNION ALL 
-select*
-FROM march_jobs) AS target1
+    SELECT*
+    FROM january_jobs
+
+    UNION ALL
+
+    SELECT*
+    FROM february_jobs
+    UNION ALL
+
+    SELECT*
+    FROM march_jobs) AS target1
 WHERE (salary_year_avg > 70000) AND (job_title_short = 'Data Analyst')
 ORDER BY salary_year_avg desc;

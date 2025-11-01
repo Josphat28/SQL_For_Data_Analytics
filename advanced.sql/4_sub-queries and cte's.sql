@@ -29,7 +29,6 @@ WITH count_of_job_skills as (
         skills_job_dim
     GROUP BY 
         skill_id)
-
 SELECT 
     skills,
     skills_dim.skill_id,
@@ -66,7 +65,6 @@ with remote_jobs as (
     inner join job_postings_fact on job_postings_fact.job_id=skills_job_dim.job_id
     WHERE (job_work_from_home = 'true') AND (job_postings_fact.job_title_short = 'Data Analyst')
     GROUP BY skill_id)
-
 SELECT 
     skills,
     skill_count

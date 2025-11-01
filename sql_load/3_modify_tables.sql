@@ -29,6 +29,7 @@ Possible Errors:
 */
 
 -- NOTE: This has been updated from the video to fix issues with encoding
+
 COPY company_dim
 FROM 'C:/Developer/SQL_For_Data_Analytics/csv_files/company_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
@@ -47,5 +48,6 @@ WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 SELECT * 
 FROM public.job_postings_fact
 LIMIT 10;
+
 -- Verify data load by counting rows in each table
 
